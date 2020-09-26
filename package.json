@@ -1,0 +1,31 @@
+{
+  "name": "npm-outdated-to-latest",
+  "version": "1.0.0",
+  "description": "Updates and installs outdated npm packages to latest.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run test:unit",
+    "test:unit": "jest ./src --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/lauravuo/npm-outdated-to-latest"
+  },
+  "keywords": [
+    "npm",
+    "outdated",
+    "package",
+    "update",
+    "dependency"
+  ],
+  "author": "lauravuo",
+  "license": "ISC",
+  "dependencies": {
+    "history": "^4.10.1",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
