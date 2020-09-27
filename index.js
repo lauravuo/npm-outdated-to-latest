@@ -8,10 +8,10 @@ const readline = require("readline");
   const packages = await preview();
   if (packages) {
     clean();
+    await update(packages);
+    await finalize();
   } else {
     console.log("No updateable packages found, skipping update.");
   }
-  await update(packages);
-  await finalize();
   process.exit(0);
 })();
