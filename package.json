@@ -1,7 +1,7 @@
 {
   "name": "npm-outdated-to-latest",
   "bin": "./index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Updates and installs outdated npm packages to latest.",
   "main": "index.js",
   "scripts": {
