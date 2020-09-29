@@ -3,16 +3,19 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - package.json
+      - package-lock.json
 jobs:
-  build:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: npm ci
       - run: |
-          npm patch
           git config user.name github-actions
           git config user.email github-actions@github.com
+          npm version patch
           git push
       - uses: actions/setup-node@v1
         with:
