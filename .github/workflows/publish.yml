@@ -1,10 +1,11 @@
 name: publish
 on:
   push:
-    #    branches:
-    #      - master
+    branches:
+      - master
     paths-ignore:
       - package.json
+      - package-lock.json
 jobs:
   patch:
     runs-on: ubuntu-latest
