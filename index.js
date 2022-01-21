@@ -10,7 +10,7 @@ const { clean, update, finalize } = require("./src/executor")();
     await update(packages);
     await finalize();
   } else {
-    console.log("No updateable packages found, skipping update.");
+    console.log("No updatable packages found, skipping update.");
   }
   process.exit(0);
 })();

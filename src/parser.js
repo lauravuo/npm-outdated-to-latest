@@ -12,7 +12,7 @@ module.exports = () => ({
       endIndex >= 0 ? noExtraStartLines.slice(0, endIndex) : noExtraStartLines;
     const parsed = dataRows.reduce((result, item) => {
       const words = item.split(" ").filter((item) => item);
-      if (words.length === 5) {
+      if (words.length === 5 || words.length === 6) {
         const current = words[1];
         const latest = words[3];
         if (gt(latest, current)) {
