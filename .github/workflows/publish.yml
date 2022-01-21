@@ -17,9 +17,9 @@ jobs:
           git config user.email github-actions@github.com
           npm version patch
           git push
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: "12.18.2"
+          node-version: "16"
           registry-url: "https://registry.npmjs.org"
       - run: npm publish
         env:

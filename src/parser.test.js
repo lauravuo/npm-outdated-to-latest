@@ -29,6 +29,17 @@ describe("Parser", () => {
       },
     });
   });
+  it("should return result on valid v16 input", () => {
+    const result = parser.parse(`Package  Current  Wanted  Latest  Location             Depended by
+    pkg   1.0.0  1.0.0   3.0.0  module     module`);
+    expect(result).toEqual({
+      pkg: {
+        current: "1.0.0",
+        wanted: "1.0.0",
+        latest: "3.0.0",
+      },
+    });
+  });
   it("should skip if latest is less than current", () => {
     const result = parser.parse(`Package  Current  Wanted  Latest  Location
     pkg   3.0.1  3.0.1   1.0.1  module`);
