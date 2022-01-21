@@ -23,9 +23,9 @@
   "author": "lauravuo",
   "license": "Apache-2.0",
   "dependencies": {
-    "semver": "^7.3.2"
+    "semver": "^7.3.5"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^27.4.7"
   }
 }

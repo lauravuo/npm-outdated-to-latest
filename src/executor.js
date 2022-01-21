@@ -3,8 +3,8 @@ const { exec } = require("child_process");
 
 module.exports = () => ({
   clean: () => {
-    fs.rmdirSync("./node_modules", { recursive: true });
-    fs.rmdirSync("./package-lock.json", { recursive: true });
+    fs.rmSync("./node_modules", { recursive: true, force: true });
+    fs.rmSync("./package-lock.json");
   },
   update: (packages) =>
     Promise.all(
